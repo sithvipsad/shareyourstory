@@ -27,56 +27,51 @@
   <!-- ========== Main ========== -->
   <main class="container">
 
-    <!-- ===== Form ===== -->
+    <!-- ===== Form Section ===== -->
     <section id="form" class="card">
       <h2>📝 សរសេររឿងក្នុងចិត្ត</h2>
       <p class="subtitle">ចែករំលែកដោយអនាមិក គ្មាននរណាដឹងថាអ្នកជាអ្នកសរសេរឡើយ</p>
 
       <div id="telegramStatus" class="status-box" style="display:none;">
-        ✅ បានភ្ជាប់ Telegram - រឿងនឹងផ្សព្វផ្សាយក្នុង Channel ដោយស្វ័យប្រវត្តិ
+        ✅ បានភ្ជាប់ Telegram
       </div>
 
       <form id="confessForm">
 
-        <!-- Name & Location -->
+        <!-- Row 1: Name & Location -->
         <div class="row">
           <div class="col">
             <input id="nameInput" class="input" type="text" placeholder="ឈ្មោះ (មិនចាំបាច់)" maxlength="50">
           </div>
           <div class="col">
             <select id="locationInput" class="input">
-                <option value="">ទីតាំង (មិនចាំបាច់)</option>
-                <optgroup label="រាជធានី">
-                <option value="ភ្នំពេញ">ភ្នំពេញ</option>
-                <optgroup label="ខេត្ត">
-                <option value="សៀមរាប">សៀមរាប</option>
-                <option value="បាត់ដំបង">បាត់ដំបង</option>
-                <option value="កំពង់ចាម">កំពង់ចាម</option>
-                <option value="ព្រះសីហនុ">ព្រះសីហនុ</option>
-                <option value="កំពត">កំពត</option>
-                <option value="កែប">កែប</option>
-                <option value="ប៉ៃលិន">ប៉ៃលិន</option>
-                <option value="កំពង់ឆ្នាំង">កំពង់ឆ្នាំង</option>
-                <option value="កំពង់ស្ពឺ">កំពង់ស្ពឺ</option>
-                <option value="កំពង់ធំ">កំពង់ធំ</option>
-                <option value="កណ្ដាល">កណ្ដាល</option>
-                <option value="កោះកុង">កោះកុង</option>
-                <option value="ក្រចេះ">ក្រចេះ</option>
-                <option value="តាកែវ">តាកែវ</option>
-                <option value="បន្ទាយមានជ័យ">បន្ទាយមានជ័យ</option>
-                <option value="ព្រៃវែង">ព្រៃវែង</option>
-                <option value="ពោធិ៍សាត់">ពោធិ៍សាត់</option>
-                <option value="មណ្ឌលគិរី">មណ្ឌលគិរី</option>
-                <option value="រតនគិរី">រតនគិរី</option>
-                <option value="ស្ទឹងត្រែង">ស្ទឹងត្រែង</option>
-                <option value="ស្វាយរៀង">ស្វាយរៀង</option>
-                <option value="ឧត្តរមានជ័យ">ឧត្តរមានជ័យ</option>
-                <option value="ត្បូងឃ្មុំ">ត្បូងឃ្មុំ</option>
-                <option value="ព្រះវិហារ">ព្រះវិហារ</option>
-                </optgroup>
-                <optgroup label="ផ្សេងៗ">
-                <option value="ក្រៅប្រទេស">ក្រៅប្រទេស</option>
-              </optgroup>
+              <option value="">ទីតាំង (មិនចាំបាច់)</option>
+              <option value="កណ្ដាល">កណ្ដាល</option>
+              <option value="កោះកុង">កោះកុង</option>
+              <option value="កែប">កែប</option>
+              <option value="កំពង់ចាម">កំពង់ចាម</option>
+              <option value="កំពង់ឆ្នាំង">កំពង់ឆ្នាំង</option>
+              <option value="កំពង់ធំ">កំពង់ធំ</option>
+              <option value="កំពង់ស្ពឺ">កំពង់ស្ពឺ</option>
+              <option value="កំពត">កំពត</option>
+              <option value="ក្រចេះ">ក្រចេះ</option>
+              <option value="តាកែវ">តាកែវ</option>
+              <option value="ត្បូងឃ្មុំ">ត្បូងឃ្មុំ</option>
+              <option value="បន្ទាយមានជ័យ">បន្ទាយមានជ័យ</option>
+              <option value="បាត់ដំបង">បាត់ដំបង</option>
+              <option value="ប៉ៃលិន">ប៉ៃលិន</option>
+              <option value="ភ្នំពេញ">ភ្នំពេញ</option>
+              <option value="ពោធិ៍សាត់">ពោធិ៍សាត់</option>
+              <option value="ព្រៃវែង">ព្រៃវែង</option>
+              <option value="ព្រះវិហារ">ព្រះវិហារ</option>
+              <option value="ព្រះសីហនុ">ព្រះសីហនុ</option>
+              <option value="មណ្ឌលគិរី">មណ្ឌលគិរី</option>
+              <option value="រតនគិរី">រតនគិរី</option>
+              <option value="សៀមរាប">សៀមរាប</option>
+              <option value="ស្ទឹងត្រែង">ស្ទឹងត្រែង</option>
+              <option value="ស្វាយរៀង">ស្វាយរៀង</option>
+              <option value="ឧត្តរមានជ័យ">ឧត្តរមានជ័យ</option>
+              <option value="ក្រៅប្រទេស">ក្រៅប្រទេស</option>
             </select>
           </div>
         </div>
@@ -94,7 +89,7 @@
         </div>
         <input type="hidden" id="tagInput" value="">
 
-        <!-- Upload -->
+        <!-- Upload Image -->
         <div class="upload-box" id="uploadBox">
           📁 ចុច ឬអូសរូបភាពមកទីនេះ (មិនចាំបាច់, តូចជាង 5MB)
         </div>
@@ -119,7 +114,7 @@
         <!-- CAPTCHA -->
         <div class="row">
           <div class="col">
-            <label id="captchaQ" style="font-weight:600;font-size:14px;line-height:44px;"></label>
+            <label id="captchaQ" class="captcha-label"></label>
           </div>
           <div class="col">
             <input id="captchaInput" class="input" type="text" placeholder="ឆ្លើយត្រង់នេះ" required>
@@ -142,7 +137,7 @@
     <!-- ===== Recent ===== -->
     <section id="recent" class="card">
       <h2>📋 រឿងថ្មីៗ</h2>
-      <input id="searchInput" class="input" type="search" placeholder="ស្វែងរកតាមឈ្មោះ ទីតាំង ឬអត្ថបទ...">
+      <input id="searchInput" class="input" type="search" placeholder="ស្វែងរក...">
       <div id="recentList"></div>
       <button id="loadMore" class="btn" style="display:none;">មើលថែមទៀត</button>
     </section>
