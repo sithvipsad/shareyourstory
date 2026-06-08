@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#6c5ce7">
+  <title>និយាយរឿងក្នុងចិត្ត | Things In My Heart</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="nav">
+    <a href="/" class="logo">💭 និយាយរឿងក្នុងចិត្ត</a>
+    <nav>
+      <a href="#form">សរសេរ</a>
+      <a href="#recent">ថ្មីៗ</a>
+      <a href="#stats">ស្ថិតិ</a>
+      <a href="https://t.me/Thingsinmyheartt" target="_blank">📢 Channel</a>
+    </nav>
+    <button id="themeBtn" class="theme-btn">🌙</button>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- Form -->
+  <section id="form" class="card">
+    <h2>📝 សរសេររឿងក្នុងចិត្ត</h2>
+    <p class="subtitle">ចែករំលែកដោយអនាមិក គ្មាននរណាដឹងថាអ្នកជាអ្នកសរសេរឡើយ</p>
+
+    <!-- បង្ហាញស្ថានភាព Telegram -->
+    <div id="telegramStatus" class="status-box" style="display:none; margin-bottom: 16px; padding: 12px; border-radius: 8px; background: #e8f5e9; color: #2e7d32; text-align: center;">
+      ✅ បានភ្ជាប់ Telegram - រឿងនឹងផ្សព្វផ្សាយក្នុង Channel ដោយស្វ័យប្រវត្តិ
+    </div>
+
+    <form id="confessForm">
+      <div class="row">
+        <input id="nameInput" class="input" type="text" placeholder="ឈ្មោះ (មិនចាំបាច់)">
+        <select id="locationInput" class="input">
+          <option value="">ទីតាំង (មិនចាំបាច់)</option>
+          <option value="ភ្នំពេញ">ភ្នំពេញ</option>
+          <option value="សៀមរាប">សៀមរាប</option>
+          <option value="បាត់ដំបង">បាត់ដំបង</option>
+          <option value="កំពង់ចាម">កំពង់ចាម</option>
+          <option value="ព្រះសីហនុ">ព្រះសីហនុ</option>
+          <option value="កំពត">កំពត</option>
+          <option value="ផ្សេងៗ">ផ្សេងៗ</option>
+        </select>
+      </div>
+
+      <!-- Tags -->
+      <div class="tags" id="tagList">
+        <span class="tag active" data-tag="">ទាំងអស់</span>
+        <span class="tag" data-tag="ស្នេហា">💕 ស្នេហា</span>
+        <span class="tag" data-tag="សោកសៅ">😢 សោកសៅ</span>
+        <span class="tag" data-tag="សប្បាយ">😊 សប្បាយ</span>
+        <span class="tag" data-tag="ខឹង">😠 ខឹង</span>
+        <span class="tag" data-tag="ផ្សេងៗ">📌 ផ្សេងៗ</span>
+      </div>
+      <input type="hidden" id="tagInput" value="">
+
+      <!-- Upload -->
+      <div class="upload-box" id="uploadBox">
+        📁 ចុចដើម្បីដាក់រូបភាព (មិនចាំបាច់, តូចជាង 5MB)
+      </div>
+      <input type="file" id="imageInput" accept="image/*" hidden>
+      <div id="imagePreview" class="preview" style="display:none">
+        <img id="previewImg" src="" alt="">
+        <button type="button" id="removeImg">✕</button>
+      </div>
+
+      <!-- Text -->
+      <textarea id="textInput" class="textarea" placeholder="សរសេររឿងក្នុងចិត្តរបស់អ្នកនៅទីនេះ..." minlength="25" maxlength="5000" rows="8" required></textarea>
+      <div class="char-count"><span id="charCount">0</span>/5000 តួអក្សរ</div>
+
+      <!-- CAPTCHA -->
+      <div class="row">
+        <label id="captchaQ"></label>
+        <input id="captchaInput" class="input" type="text" placeholder="ឆ្លើយត្រង់នេះ" required>
+      </div>
+
+      <!-- Agree -->
+      <label class="check">
+        <input type="checkbox" id="agree" required>
+        ខ្ញុំយល់ព្រមនឹងលក្ខខណ្ឌ
+      </label>
+
+      <!-- Submit -->
+      <button id="submitBtn" class="btn" type="submit" disabled>📤 ផ្ញើរឿងក្នុងចិត្ត</button>
+      <div id="msgBox"></div>
+    </form>
+  </section>
+
+  <!-- Recent -->
+  <section id="recent" class="card">
+    <h2>📋 រឿងថ្មីៗ</h2>
+    <input id="searchInput" class="input" type="search" placeholder="ស្វែងរក...">
+    <div id="recentList"></div>
+    <button id="loadMore" class="btn" style="display:none">មើលថែមទៀត</button>
+  </section>
+
+  <!-- Stats -->
+  <section id="stats" class="card">
+    <h2>📊 ស្ថិតិ</h2>
+    <div class="stats-grid">
+      <div class="stat">
+        <span>រឿងថ្ងៃនេះ</span>
+        <strong id="statToday">0</strong>
+      </div>
+      <div class="stat">
+        <span>រឿងសរុប</span>
+        <strong id="statTotal">0</strong>
+      </div>
+      <div class="stat">
+        <span>អ្នកអនឡាញ</span>
+        <strong id="statOnline">0</strong>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2026 និយាយរឿងក្នុងចិត្ត | <a href="https://t.me/Thingsinmyheartt" target="_blank">📢 Channel</a></p>
+  <p class="secret">Things In My Heart - written for GL</p>
+</footer>
+
+<!-- Modal -->
+<div id="modal" class="modal" hidden>
+  <div class="modal-box">
+    <h3>បញ្ជាក់ការផ្ញើរ</h3>
+    <p>ចង់ផ្ញើរឿងនេះមែនទេ?</p>
+    <div class="modal-btns">
+      <button id="modalNo" class="btn-outline">ទេ</button>
+      <button id="modalYes" class="btn">ច្បាស់ហើយ</button>
+    </div>
+  </div>
+</div>
+
+<!-- Toast -->
+<div id="toast" class="toast" hidden></div>
+
+<!-- Telegram SDK -->
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<script src="telegram.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
