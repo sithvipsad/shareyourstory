@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#6c5ce7">
+  <meta name="description" content="និយាយរឿងក្នុងចិត្ត - Things In My Heart - ចែករំលែករឿងក្នុងចិត្តដោយអនាមិក">
   <title>និយាយរឿងក្នុងចិត្ត | Things In My Heart</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -24,28 +25,54 @@
 
 <main class="container">
 
-  <!-- Form -->
+  <!-- Form Section -->
   <section id="form" class="card">
     <h2>📝 សរសេររឿងក្នុងចិត្ត</h2>
     <p class="subtitle">ចែករំលែកដោយអនាមិក គ្មាននរណាដឹងថាអ្នកជាអ្នកសរសេរឡើយ</p>
 
-    <!-- បង្ហាញស្ថានភាព Telegram -->
-    <div id="telegramStatus" class="status-box" style="display:none; margin-bottom: 16px; padding: 12px; border-radius: 8px; background: #e8f5e9; color: #2e7d32; text-align: center;">
+    <!-- Telegram Status -->
+    <div id="telegramStatus" class="status-box" style="display:none; margin-bottom:16px; padding:12px; border-radius:8px; background:#e8f5e9; color:#2e7d32; text-align:center;">
       ✅ បានភ្ជាប់ Telegram - រឿងនឹងផ្សព្វផ្សាយក្នុង Channel ដោយស្វ័យប្រវត្តិ
     </div>
 
     <form id="confessForm">
+      <!-- Name & Location -->
       <div class="row">
-        <input id="nameInput" class="input" type="text" placeholder="ឈ្មោះ (មិនចាំបាច់)">
+        <input id="nameInput" class="input" type="text" placeholder="ឈ្មោះ (មិនចាំបាច់)" maxlength="50">
         <select id="locationInput" class="input">
           <option value="">ទីតាំង (មិនចាំបាច់)</option>
-          <option value="ភ្នំពេញ">ភ្នំពេញ</option>
-          <option value="សៀមរាប">សៀមរាប</option>
-          <option value="បាត់ដំបង">បាត់ដំបង</option>
-          <option value="កំពង់ចាម">កំពង់ចាម</option>
-          <option value="ព្រះសីហនុ">ព្រះសីហនុ</option>
-          <option value="កំពត">កំពត</option>
-          <option value="ផ្សេងៗ">ផ្សេងៗ</option>
+          <optgroup label="រាជធានី">
+            <option value="ភ្នំពេញ">ភ្នំពេញ</option>
+          </optgroup>
+          <optgroup label="ខេត្ត">
+            <option value="សៀមរាប">សៀមរាប</option>
+            <option value="បាត់ដំបង">បាត់ដំបង</option>
+            <option value="កំពង់ចាម">កំពង់ចាម</option>
+            <option value="ព្រះសីហនុ">ព្រះសីហនុ</option>
+            <option value="កំពត">កំពត</option>
+            <option value="កែប">កែប</option>
+            <option value="ប៉ៃលិន">ប៉ៃលិន</option>
+            <option value="កំពង់ឆ្នាំង">កំពង់ឆ្នាំង</option>
+            <option value="កំពង់ស្ពឺ">កំពង់ស្ពឺ</option>
+            <option value="កំពង់ធំ">កំពង់ធំ</option>
+            <option value="កណ្ដាល">កណ្ដាល</option>
+            <option value="កោះកុង">កោះកុង</option>
+            <option value="ក្រចេះ">ក្រចេះ</option>
+            <option value="តាកែវ">តាកែវ</option>
+            <option value="បន្ទាយមានជ័យ">បន្ទាយមានជ័យ</option>
+            <option value="ព្រៃវែង">ព្រៃវែង</option>
+            <option value="ពោធិ៍សាត់">ពោធិ៍សាត់</option>
+            <option value="មណ្ឌលគិរី">មណ្ឌលគិរី</option>
+            <option value="រតនគិរី">រតនគិរី</option>
+            <option value="ស្ទឹងត្រែង">ស្ទឹងត្រែង</option>
+            <option value="ស្វាយរៀង">ស្វាយរៀង</option>
+            <option value="ឧត្តរមានជ័យ">ឧត្តរមានជ័យ</option>
+            <option value="ត្បូងឃ្មុំ">ត្បូងឃ្មុំ</option>
+            <option value="ព្រះវិហារ">ព្រះវិហារ</option>
+          </optgroup>
+          <optgroup label="ផ្សេងៗ">
+            <option value="ក្រៅប្រទេស">ក្រៅប្រទេស</option>
+          </optgroup>
         </select>
       </div>
 
@@ -56,22 +83,32 @@
         <span class="tag" data-tag="សោកសៅ">😢 សោកសៅ</span>
         <span class="tag" data-tag="សប្បាយ">😊 សប្បាយ</span>
         <span class="tag" data-tag="ខឹង">😠 ខឹង</span>
+        <span class="tag" data-tag="អាថ៌កំបាំង">🤫 អាថ៌កំបាំង</span>
+        <span class="tag" data-tag="ដំបូន្មាន">💡 ដំបូន្មាន</span>
         <span class="tag" data-tag="ផ្សេងៗ">📌 ផ្សេងៗ</span>
       </div>
       <input type="hidden" id="tagInput" value="">
 
-      <!-- Upload -->
+      <!-- Upload Image -->
       <div class="upload-box" id="uploadBox">
-        📁 ចុចដើម្បីដាក់រូបភាព (មិនចាំបាច់, តូចជាង 5MB)
+        📁 ចុច ឬអូសរូបភាពមកទីនេះ (មិនចាំបាច់, តូចជាង 5MB)
       </div>
       <input type="file" id="imageInput" accept="image/*" hidden>
       <div id="imagePreview" class="preview" style="display:none">
-        <img id="previewImg" src="" alt="">
+        <img id="previewImg" src="" alt="Preview">
         <button type="button" id="removeImg">✕</button>
       </div>
 
       <!-- Text -->
-      <textarea id="textInput" class="textarea" placeholder="សរសេររឿងក្នុងចិត្តរបស់អ្នកនៅទីនេះ..." minlength="25" maxlength="5000" rows="8" required></textarea>
+      <textarea id="textInput" class="textarea" placeholder="សរសេររឿងក្នុងចិត្តរបស់អ្នកនៅទីនេះ...
+      
+🔒 គ្មាននរណាដឹងថាអ្នកជាអ្នកសរសេរឡើយ
+
+⚠️ ច្បាប់៖
+❌ កុំរើសអើង
+❌ កុំបំពានអ្នកដទៃ
+❌ កុំផ្សាយពាណិជ្ជកម្ម
+❌ កុំនយោបាយ" minlength="25" maxlength="5000" rows="8" required></textarea>
       <div class="char-count"><span id="charCount">0</span>/5000 តួអក្សរ</div>
 
       <!-- CAPTCHA -->
@@ -92,15 +129,15 @@
     </form>
   </section>
 
-  <!-- Recent -->
+  <!-- Recent Section -->
   <section id="recent" class="card">
     <h2>📋 រឿងថ្មីៗ</h2>
-    <input id="searchInput" class="input" type="search" placeholder="ស្វែងរក...">
+    <input id="searchInput" class="input" type="search" placeholder="ស្វែងរកតាមឈ្មោះ ទីតាំង ឬអត្ថបទ...">
     <div id="recentList"></div>
     <button id="loadMore" class="btn" style="display:none">មើលថែមទៀត</button>
   </section>
 
-  <!-- Stats -->
+  <!-- Stats Section -->
   <section id="stats" class="card">
     <h2>📊 ស្ថិតិ</h2>
     <div class="stats-grid">
@@ -141,7 +178,6 @@
 <!-- Toast -->
 <div id="toast" class="toast" hidden></div>
 
-<!-- Telegram SDK -->
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
 <script src="telegram.js"></script>
 <script src="app.js"></script>
